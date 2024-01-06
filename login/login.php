@@ -17,6 +17,7 @@ if(isset($_POST['login'])) {
 //login attempts - 1
 $timer = time() - 40;
 
+    //i ccount yung email kung ilan na ang pumasok sa database | account_attempts
     $login_attempts = mysqli_query($con,"SELECT count(*) as total_count, login_time FROM account_attempts WHERE email = '$email' and login_time > '$timer' order by login_time desc ");
     $res = mysqli_fetch_assoc($login_attempts);
     $count = $res['total_count'];
@@ -78,6 +79,7 @@ $timer = time() - 40;
 
                                if($fetch['change_code'] == '0') {
 
+                                // account  
                                 $email = $fetch['email'];
                                 $account_id = $fetch['id'];
                                 $attempts = "DELETE FROM account_attempts WHERE account_id = '$account_id' and email = '$email' ";
@@ -142,6 +144,7 @@ $timer = time() - 40;
 
                                if($fetch['change_code'] == '0') {
 
+                                // account  
                                 $email = $fetch['email'];
                                 $account_id = $fetch['id'];
                                 $attempts = "DELETE FROM account_attempts WHERE account_id = '$account_id' and email = '$email' ";
@@ -200,7 +203,6 @@ $timer = time() - 40;
 
                   }
 
-                 // kapag hindi tinuloy ng user ang pag submit ng otp or pag signup.
                 } else if ($status == 'notverified') {
 
                     $_SESSION['email'] = $email;
@@ -281,6 +283,7 @@ $timer = time() - 40;
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
+
   <!-- TITLE -->
   <title> PESO - Login or Signup </title>
 
@@ -290,7 +293,7 @@ $timer = time() - 40;
 
 <?php include 'navbar.php' ?>
 
-<section class="py-9">
+<section class="my-0 py-7">
 
 <style type='text/css'>
 
@@ -330,7 +333,7 @@ $timer = time() - 40;
 <form action="login.php" method="POST" autocomplete="" class="auth-form login-form">
 
     <div class="container ">
-    <div class="row ms-lg-11 mt-0">
+    <div class="row ms-lg-12">
 
           <div class="col-lg-2 col-md-5 col-5 position-relative bg-cover px-0" style="background: none;"></div>
           <div class="col-lg-5 col-md-12 col-12" style="background: none">
