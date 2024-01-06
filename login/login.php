@@ -17,14 +17,12 @@ if(isset($_POST['login'])) {
 //login attempts - 1
 $timer = time() - 40;
 
-    //i ccount yung email kung ilan na ang pumasok sa database | account_attempts
     $login_attempts = mysqli_query($con,"SELECT count(*) as total_count, login_time FROM account_attempts WHERE email = '$email' and login_time > '$timer' order by login_time desc ");
     $res = mysqli_fetch_assoc($login_attempts);
     $count = $res['total_count'];
     $login_time = $res['login_time'];
 
     //Count Attempts - 01
-    //kapag naka 3 attempts na mag hihintay ang user ng 30 seconds
     if ($count == 3) {
 
     $msg = "Please try again after 30 seconds";
@@ -35,36 +33,30 @@ $timer = time() - 40;
 
     } else {
         
-        //after 30 seconds attempts babaklik ulit sa umpisa para mag login - 2
         $email = mysqli_real_escape_string($con, $_SESSION['email'] = $_POST['email']);
         $password = mysqli_real_escape_string($con, $_SESSION['password'] = $_POST['password']);
 
         $check_email = "SELECT * FROM account WHERE email = '$email' ";
         $res = mysqli_query($con, $check_email);
 
-        //che check sa database kung meron email - 3
         if (mysqli_num_rows($res) > 0) {
 
-            // pag meron na email sa database - 4
             $fetch = mysqli_fetch_assoc($res);
             $fetch_pass = $fetch['password'];
 
             $status = $fetch['status'];
             $email_code = $fetch['email_code'];
 
-            //che check nya ulit kung tama or = pareho yung email at password - 5
             if (password_verify($password, $fetch_pass)) {
 
                 $_SESSION['email'] = $email;
                 $status = $fetch['status'];
                 
-                //kapag tama ang email at password che check sa database kung verified naba ang account - 6 
                 if ($status == 'verified') {
 
                     $_SESSION['email'] = $email;
                     $_SESSION['password'] = $password;
 
-                    //kapag okay na ang account papasok sa database kung anong oras naglogin | account report 
                     $email = $fetch['email'];
                     $account_id = $fetch['id'];
 
@@ -77,7 +69,6 @@ $timer = time() - 40;
                                                               login_date = '$login_date' ";
                     $account = mysqli_query($con, $report);
 
-                  // kapag okay na verified ang account che check sa database kung anong type ang account if admin or user - 7
                   if($fetch['user_type'] == 'admin') {
 
                             $_SESSION['email'] = $email;
@@ -87,7 +78,6 @@ $timer = time() - 40;
 
                                if($fetch['change_code'] == '0') {
 
-                                // account  
                                 $email = $fetch['email'];
                                 $account_id = $fetch['id'];
                                 $attempts = "DELETE FROM account_attempts WHERE account_id = '$account_id' and email = '$email' ";
@@ -152,7 +142,6 @@ $timer = time() - 40;
 
                                if($fetch['change_code'] == '0') {
 
-                                // account  
                                 $email = $fetch['email'];
                                 $account_id = $fetch['id'];
                                 $attempts = "DELETE FROM account_attempts WHERE account_id = '$account_id' and email = '$email' ";
@@ -219,7 +208,6 @@ $timer = time() - 40;
                     $_SESSION['info'] = $info;
                     header('location: signup/signup_b.php');
 
-                //kapag ng forgot password kapag bago ang otp.
                 } else {
 
                     $info = "We've sent a verification code to your email - $email";
@@ -229,8 +217,6 @@ $timer = time() - 40;
 
         $email = mysqli_real_escape_string($con, $_SESSION['email'] = $_POST['email']);
         
-
-            // kapag hindi tinuloy ng user ang pag submit ng otp or pag signup.
             if ($email_code > 0) {
 
                 $_SESSION['email'] = $email;
@@ -247,7 +233,6 @@ $timer = time() - 40;
 
             }
 
-            //kapag mali ang email or user
             }  else {
 
                 $errors['email'] = "Incorrect email or password!";
@@ -255,19 +240,16 @@ $timer = time() - 40;
                 $count++;
                 $remaining_attempts = 3-$count;
 
-                //ccount nya kung naka ilang attemps na ang user
                 if ($remaining_attempts == 0) {
  
                     $msg = "Please try after 30 seconds";
 
-                // bibilangin kung naka ilang attempts na ang user
                 } else {
 
                     $msg = "Please enter valid details. $remaining_attempts attempts remaining.";
 
                 }
 
-                    //kada attempt na mali mag iinsert sa database | ACCOUNT ATTEMPTS
                     $email = $fetch['email'];
                     $account_id = $fetch['id'];
 
