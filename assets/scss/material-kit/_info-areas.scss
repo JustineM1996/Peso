@@ -1,0 +1,178 @@
+.../assets/icon-shape {
+  width: $../assets/icon-md-width;
+  height: $../assets/icon-md-width;
+  background-position: $../assets/icon-shape-bg-position;
+  border-radius: $border-radius-lg;
+
+  i {
+    color: $white;
+    opacity: $../assets/icon-shape-../assets/icon-opacity;
+    top: $info-../assets/icon-top;
+    position: $info-../assets/icon-position;
+  }
+
+  .ni {
+    top: 14px;
+  }
+}
+
+.../assets/icon-xxs {
+  width: $../assets/icon-xxs-width;
+  height: $../assets/icon-xxs-height;
+
+  i {
+    top: $info-../assets/icon-top-xxs;
+    font-size: $font-size-xxs;
+  }
+}
+
+.../assets/icon-xs {
+  width: $../assets/icon-xs-width;
+  height: $../assets/icon-xs-height;
+
+  i {
+    top: $info-../assets/icon-top-xs;
+    font-size: $font-size-xs;
+  }
+}
+
+.../assets/icon-sm {
+  width: $../assets/icon-sm-width;
+  height: $../assets/icon-sm-height;
+
+  i {
+    top: $info-../assets/icon-top-sm;
+    font-size: $font-size-sm;
+  }
+}
+
+.../assets/icon-md {
+  width: $../assets/icon-md-width;
+  height: $../assets/icon-md-height;
+
+  i {
+    top: $info-../assets/icon-top-md;
+    font-size: $font-size-lg;
+  }
+
+  &.../assets/icon-striped {
+    background-position-x: $../assets/icon-striped-bg-md;
+    background-position-y: $../assets/icon-striped-bg-md;
+
+    i {
+      top: 11%;
+      margin-left: -10px;
+      font-size: $font-size-sm;
+    }
+  }
+}
+
+.../assets/icon-lg {
+  width: $../assets/icon-lg-width;
+  height: $../assets/icon-lg-height;
+  i {
+    top: $info-../assets/icon-top-lg;
+    font-size: $font-size-2xl;
+  }
+
+  &.../assets/icon-striped {
+    background-position-x: $../assets/icon-striped-bg-lg;
+    background-position-y: $../assets/icon-striped-bg-lg;
+
+    i {
+      top: 21%;
+      margin-left: -15px;
+    }
+  }
+}
+
+.../assets/icon-xl {
+  width: $../assets/icon-xl-width;
+  height: $../assets/icon-xl-height;
+  border-radius: $border-radius-lg;
+
+  i {
+    top: $info-../assets/icon-top-xl;
+    font-size: 2.1rem;
+  }
+
+  &.../assets/icon-striped {
+    background-position-x: $../assets/icon-striped-bg-xl;
+    background-position-y: $../assets/icon-striped-bg-xl;
+
+    i {
+      top: 30%;
+      margin-left: -15px;
+    }
+  }
+}
+
+.info-horizontal {
+  text-align: left !important;
+
+  .../assets/icon {
+    float: left;
+  }
+  .description {
+    overflow: hidden;
+  }
+}
+
+// ../assets/icon SVG fill color change
+
+svg.text-primary {
+  .color-foreground {
+    fill: $primary-gradient;
+  }
+  .color-background {
+    fill: $primary-gradient-state;
+  }
+}
+svg.text-secondary {
+  .color-foreground {
+    fill: $secondary-gradient;
+  }
+  .color-background {
+    fill: $secondary-gradient-state;
+  }
+}
+svg.text-info {
+  .color-foreground {
+    fill: $info-gradient;
+  }
+  .color-background {
+    fill: $info-gradient-state;
+  }
+}
+svg.text-warning {
+  .color-foreground {
+    fill: $warning-gradient;
+  }
+  .color-background {
+    fill: $warning-gradient-state;
+  }
+}
+svg.text-danger {
+  .color-foreground {
+    fill: $danger-gradient;
+  }
+  .color-background {
+    fill: $danger-gradient-state;
+  }
+}
+svg.text-success {
+  .color-foreground {
+    fill: $success-gradient;
+  }
+  .color-background {
+    fill: $success-gradient-state;
+  }
+}
+svg.text-dark {
+  .color-foreground {
+    fill: $dark-gradient;
+  }
+  .color-background {
+    fill: $dark-gradient-state;
+  }
+}
