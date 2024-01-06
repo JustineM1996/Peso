@@ -487,7 +487,7 @@ if(isset($_GET['add_company'])) {
                       </svg>
                       <span class="ms-1"> 
 
-                          <script src="ph-address.js"></script>
+                          <script src="ph-address-selector.js"></script>
 
                                   <input type="text" class="col-lg-10" name="Region" id="region-text" placeholder="Region" 
                                          style="font-size: 14px; color: black; border: none; background: none;" >
@@ -639,7 +639,6 @@ if(isset($_GET['add_company'])) {
                           </div>
 
                           <!-- COMPLETE ADDRESS -->
-                          <script src="ph-address-selector.js"></script>
                           <div class="nav-wrapper position-relative mt-3">
                           <label class="text-sm"> Complete Addres </label>
                           
@@ -712,10 +711,6 @@ if(isset($_GET['add_company'])) {
 
                           </ul>
                           </div>
-
-
-
-
 
                           <div class="nav-wrapper position-relative mt-5">
                           <label class="text-sm"> Contact Information </label>
@@ -1281,7 +1276,6 @@ $link = $row['link'];
                         ?>
 
                           <!-- COMPLETE ADDRESS -->
-                          <script src="ph-address-selector.js"></script>
                           <div class="nav-wrapper position-relative mt-3">
                           <label class="text-sm"> Complete Addres </label>
 
