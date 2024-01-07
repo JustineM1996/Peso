@@ -14,12 +14,7 @@
 
 <body> 
 
-
-
 <section class="my-0 py-8">
-
-
-
 
 <!-- START -->
 <header class="header-2 py-5">
@@ -39,8 +34,6 @@
 
 </header>
 <!-- END -->
-
-
 
 <!-- START -->
 <section class="py-0">

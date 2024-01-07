@@ -411,7 +411,7 @@ if (isset($_POST['signup'])) {
               <button type="submit" name="signup" id="submit" class="btn btn-success mt-3" style="font-size: 12px;" disabled> Next </button> 
 
               <div style="float: right;" class="mt-3">
-                  <a href='../index.php' 
+                  <a href='../login.php' 
                     class="text-secondary ../assets/icon-move-right" style="text-decoration: none;" > 
                      <h5 style='font-size: 12px; font-weight: normal; color: #000066;'> Login 
                       <i style='color: #000066;' class='fas fa-arrow-right ms-2 mb-3 me-1 mt-3 mt-md-3'></i>

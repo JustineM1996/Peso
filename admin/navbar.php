@@ -142,9 +142,6 @@ input.location_../assets/icon {
               </a>
           </li>
 
-
-
-
         <li class="nav-item ms-lg-auto mt-3">
    
           <a href='#' class='nav-link ps-2 d-flex cursor-pointer align-items-center' 
@@ -298,8 +295,6 @@ input.location_../assets/icon {
               }
 
            ?>
-
-
                     <?php
 
                     include '../database/database.php';
@@ -555,8 +550,6 @@ input.location_../assets/icon {
 
 </style>
 
-
-
         <li class="nav-item dropdown-hover">
 
           <?php
@@ -594,7 +587,7 @@ input.location_../assets/icon {
               <li class="nav-item dropdown dropdown-hover dropdown-subitem mt-2">
                 <a class="dropdown-item py-2 ps-3 border-radius-md" href="account-view.php?id=<?php echo $id_acc?>">
                   <div class="w-100 d-flex align-items-center justify-content-between">
-                      <P class="nav-link dropdown-header d-flex cursor-pointer justify-content-cente align-items-center p-0"> Manage your Account </P>
+                      <P class="nav-link dropdown-header d-flex cursor-pointer justify-content-cente align-items-center p-0"> Manage Account </P>
                   </div>
                 </a>
               </li>

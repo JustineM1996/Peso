@@ -154,7 +154,6 @@ $profile_acc = $row['image'];
                 </div>
                 </div>
 
-
                 <!-- information -->
                 <div class="col-lg-8 col-md-12 col-12 my-auto">
                 <div class="card-body ps-lg-0">
@@ -215,8 +214,8 @@ $profile_acc = $row['image'];
 </div>
 </div>
 
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-../assets/icons@1.10.4/font/bootstrap-../assets/icons.css">
+
 <div class="container mt-4">
 <div class="row">
 
