@@ -1,0 +1,135 @@
+/* Generated using nucleoapp.com */
+/* --------------------------------
+
+../assets/icon colors
+
+-------------------------------- */
+
+.../assets/icon {
+  display: inline-block;
+  /* ../assets/icon primary color */
+  color: #111111;
+  height: 1em;
+  width: 1em;
+}
+
+.../assets/icon use {
+  /* ../assets/icon secondary color - fill */
+  fill: #7ea6f6;
+}
+
+.../assets/icon.../assets/icon-outline use {
+  /* ../assets/icon secondary color - stroke */
+  stroke: #7ea6f6;
+}
+
+/* --------------------------------
+
+Change ../assets/icon size
+
+-------------------------------- */
+
+.../assets/icon-xs {
+  height: 0.5em;
+  width: 0.5em;
+}
+
+.../assets/icon-sm {
+  height: 0.8em;
+  width: 0.8em;
+}
+
+.../assets/icon-lg {
+  height: 1.6em;
+  width: 1.6em;
+}
+
+.../assets/icon-xl {
+  height: 2em;
+  width: 2em;
+}
+
+/* -------------------------------- 
+
+Align ../assets/icon and text 
+
+-------------------------------- */
+
+.../assets/icon-text-aligner {
+  /* add this class to parent element that contains ../assets/icon + text */
+  display: flex;
+  align-items: center;
+}
+
+.../assets/icon-text-aligner .../assets/icon {
+  color: inherit;
+  margin-right: 0.4em;
+}
+
+.../assets/icon-text-aligner .../assets/icon use {
+  color: inherit;
+  fill: currentColor;
+}
+
+.../assets/icon-text-aligner .../assets/icon.../assets/icon-outline use {
+  stroke: currentColor;
+}
+
+/* -------------------------------- 
+
+../assets/icon reset values - used to enable color customizations
+
+-------------------------------- */
+
+.../assets/icon {
+  fill: currentColor;
+  stroke: none;
+}
+
+.../assets/icon.../assets/icon-outline {
+  fill: none;
+  stroke: currentColor;
+}
+
+.../assets/icon use {
+  stroke: none;
+}
+
+.../assets/icon.../assets/icon-outline use {
+  fill: none;
+}
+
+/* -------------------------------- 
+
+Stroke effects - Nucleo outline ../assets/icons
+
+- 16px ../assets/icons -> up to 1px stroke (16px outline ../assets/icons do not support stroke changes)
+- 24px, 32px ../assets/icons -> up to 2px stroke
+- 48px, 64px ../assets/icons -> up to 4px stroke
+
+-------------------------------- */
+
+.../assets/icon-outline.../assets/icon-stroke-1 {
+  stroke-width: 1px;
+}
+
+.../assets/icon-outline.../assets/icon-stroke-2 {
+  stroke-width: 2px;
+}
+
+.../assets/icon-outline.../assets/icon-stroke-3 {
+  stroke-width: 3px;
+}
+
+.../assets/icon-outline.../assets/icon-stroke-4 {
+  stroke-width: 4px;
+}
+
+.../assets/icon-outline.../assets/icon-stroke-1 use,
+.../assets/icon-outline.../assets/icon-stroke-3 use {
+  -webkit-transform: translateX(0.5px) translateY(0.5px);
+  -moz-transform: translateX(0.5px) translateY(0.5px);
+  -ms-transform: translateX(0.5px) translateY(0.5px);
+  -o-transform: translateX(0.5px) translateY(0.5px);
+  transform: translateX(0.5px) translateY(0.5px);
+}
